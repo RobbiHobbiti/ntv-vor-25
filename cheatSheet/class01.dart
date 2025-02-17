@@ -35,6 +35,8 @@ void main(List<String> arguments) {
     3.  Remove all the spaces from the rhyme. And print the modified rhyme.
    */
   String NureseryRyhme = "Eena, meena, mina, mo, Catch a mouse by the toe; If he squeals let him go, Eeena, meena, mina, mo.";
+  String fixNureseryRyhme = NureseryRyhme.replaceAll(" ", "");
+  print("$fixNureseryRyhme");
   /*
    4. Prompt a user for their full name (first name and last name)
     1. Store the users entry.
@@ -43,6 +45,15 @@ void main(List<String> arguments) {
     4. Capitalise and display the users full name with each word having a capital
     first letter, and the other letters being lowercase.
    */
+  print("whats your first name?");
+  String firstName = stdin.readLineSync().toString();
+  print("whats your last name?");
+  String lastName = stdin.readLineSync().toString();
+  String fullName = firstName + " " + lastName;
+  print("Hello $fullName".toUpperCase());
+  String fixName = "Róbert";
+  print("hallo $fixName $lastName");
+  print("${firstName[0].toUpperCase()}${firstName.substring(1)} ${lastName[0].toUpperCase()}${lastName.substring(1)}");
 
   /*
     5. Display the following SSN on the correct Format:
@@ -51,7 +62,17 @@ void main(List<String> arguments) {
   String SSN1 = "200689-2409";
   String SSN2 = "200689 2409";
   String SSN3 = "2 006 8924 09";
+
+  String fixSSN1 = SSN1.replaceAll("-", "");
+  String fixSSN2 = SSN2.replaceAll(" ", "");
+  String fixSSN3 = SSN3.replaceAll(" ", "");
+
+  print("$fixSSN1");
+  print("$fixSSN2");
+  print("$fixSSN3");
+
   /*
   Bónus task calculate the age from the SSN.
    */
+  
 }
