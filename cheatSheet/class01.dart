@@ -12,7 +12,6 @@ void main(List<String> arguments) {
   String firstName = stdin.readLineSync().toString();
   String message = "Ertu Glaður?";
   print("Góðan dægin $firstName $message");
-}
   /* 1. Find a quote from a famous person you admire. Print the quote and the name of its
   author. Your output should look something like the following, including the
   quotation marks:
@@ -21,8 +20,8 @@ void main(List<String> arguments) {
   */
 
   String name = "dr seuss";
-  String m = "You know you're in love when you can't fall asleep because reality is finally better than your dreams.";
-  print($name once said:$message )
+  String msg = "You know you're in love when you can't fall asleep because reality is finally better than your dreams.";
+  print("$name once said:$msg");
   /*
     2. Assign a message to a variable, and print that message. Then change the value of
   the variable to a new message, and print the new message.
