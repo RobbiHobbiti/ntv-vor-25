@@ -38,7 +38,6 @@ void main(List<String> arguments) {
   String emailAddress = username + "@" + url;
   print(emailAddress);
 
-
 }
 
 String removeIcelandicLetters(String input) {
