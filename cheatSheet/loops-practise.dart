@@ -22,7 +22,7 @@ void main(){
     print(word[i]);
   }
 */
-  List pizza = ['Pepporoni','hawaiian','cheese','margherita'];
+  List pizza = ['Pepperoni','hawaiian','cheese','margherita'];
   for(String pizzas in pizza){
     print('i love eating $pizzas pizza');
   }
