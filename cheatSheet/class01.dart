@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:ntv_vor_25/methods.dart';
+import 'package:test/expect.dart';
 void main(List<String> arguments) {
   /*
     0. Create a personal message. Use a variable to represent a person's name, and print a
@@ -75,6 +76,9 @@ void main(List<String> arguments) {
   /*
   Bónus task calculate the age from the SSN.
    */
-
+  print(fixSSN1.substring(4,6));
+  int? ssnFormatted = int.tryParse(fixssn1.substring(startsWith));
+  int age = 125 - ssnFormatted! ;
+  print(age);
   
 }
