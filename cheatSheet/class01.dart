@@ -77,7 +77,7 @@ void main(List<String> arguments) {
   Bónus task calculate the age from the SSN.
    */
   print(fixSSN1.substring(4,6));
-  int? ssnFormatted = int.tryParse(fixssn1.substring(startsWith));
+  int? ssnFormatted = int.tryParse(fixSSN1.substring(startsWith));
   int age = 125 - ssnFormatted! ;
   print(age);
   

@@ -66,7 +66,6 @@ class footballGame {
           this.awayTeamScore++;
         }
         print("${minute}: ${homeTeamScore} - ${awayTeamScore}");
-        
       }
     }
   }
