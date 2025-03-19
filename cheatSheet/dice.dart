@@ -19,6 +19,7 @@ void main() {
       DicePlayers userNames = DicePlayers(p1: p1Username, p2: p2Username);
       userNames.game();
 
+      diceGame = false;
     } else if (start.isEmpty || start.isNotEmpty) {
       print('Please type "start" to begin the game');
       continue;
@@ -73,8 +74,7 @@ class DicePlayers {
 
     while (Game == true) {
       while (p1Round == true) {
-        rounds++;
-        print('Round $rounds');
+        print('Round ${rounds + 1} ');
         print('$p1 type "Roll" to roll the dice');
         String input1 = stdin.readLineSync()?.toLowerCase() ?? "";
         DiceSides p1Turn = DiceSides(
@@ -86,12 +86,16 @@ class DicePlayers {
           Side6: 6,
         );
         if (input1.contains("roll")) {
+          rounds++;
           int abc = p1Turn.Roll();
           int abd = p1Turn.Roll();
-          p1Score = abc + abd;
+          p1Score =  p1Score + (abc + abd);
           print("$p1 rolled a $abc and $abd $p1 has $p1Score");
           p1Round = false;
           p2Round = true;
+        }else if (input1.isEmpty || input1.isNotEmpty) {
+          print('Please type "Roll" to roll the dice');
+          continue;
         }
       }
       while (p2Round == true) {
@@ -112,11 +116,24 @@ class DicePlayers {
           print("$p2 rolled a $pop and $ice $p2 has $p2Score");
           p2Round = false;
           p1Round = true;
+        }else if (input2.isEmpty || input2.isNotEmpty) {
+          print('Please type "Roll" to roll the dice');
+          continue;
         }
       }
       if (rounds == 3) {
         print("============ Game!!! ============");
-        
+        Game = false;
+        if (p1Score >= p2Score){
+          print("$p1 has won with $p1Score points");
+          break;
+        }else if (p1Score <= p2Score){
+          print("$p2 has won with $p2Score points");
+          break;
+        }else if (p1Score == p2Score){
+          print("its a draw both players had $p1Score points");
+          break;
+        }
       }
     }
   }
