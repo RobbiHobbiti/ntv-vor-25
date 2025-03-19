@@ -6,7 +6,7 @@ import 'dart:io';
 
 void main() {
   print("==========CALCULATOR==========");
-  print('if you want to exit type "exit"');
+  print('Please enter a number or if you want to exit type "exit"');
 
 
   bool calc = true;
