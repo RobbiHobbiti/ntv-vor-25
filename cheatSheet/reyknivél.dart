@@ -41,7 +41,7 @@ void main() {
       double num2 = double.parse(nums[1]);
       double sum = num1 / num2;
       print("$num1 / $num2 = $sum");
-    } else if (input.contains("exit"));
+    } else if (input.toLowerCase().contains("exit"));
     break;
   }
 }
