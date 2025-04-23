@@ -1,2 +1,4 @@
-username;password
 poolari;klopp4ever
+admin;notAdmin
+banani;ananas
+rabbabari;slaufa
